@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
 .container {
+  display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .container .card {
@@ -32,10 +37,11 @@
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 12em;
-  font-weight: 800;
+  font-size: 10em;
+  font-weight: 600;
   font-style: italic;
-  color: rgba(250, 193, 248, 0.05);
+  font-family: "Monoton";
+  color: rgba(159, 189, 245, 0.165);
 }
 
 .container .card .imgBx {
@@ -63,16 +69,17 @@
 
 .container .card .contentBx {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: -25px;
+  width: calc(100% - 20px);
   height: 100px;
   text-align: center;
   transition: 1s;
   z-index: 10;
+  margin: 0 10px;
 }
 
 .container .card:hover .contentBx {
-  height: 210px;
+  height: 225px;
 }
 
 .container .card .contentBx h2 {
@@ -124,6 +131,7 @@
   text-align: center;
   line-height: 26px;
   font-size: 14px;
+  border-radius: 15px;
   display: inline-block;
   color: #111;
   background: #fff;
@@ -173,7 +181,7 @@
   font-weight: 600;
   color: #111;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(70px);
   transition: 0.5s;
   margin-top: 0;
   min-width: 140px;
@@ -184,4 +192,7 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
+}
+.boxinfo:hover {
+  color: rgb(118, 142, 239);
 }

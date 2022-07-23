@@ -1,4 +1,5 @@
-import { Box, Button, Stack } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
+import { borderRadius } from "@mui/system";
 import React, { useState } from "react";
 import style from "../styles/ProductCard.module.css";
 
@@ -6,7 +7,7 @@ const CardProduct = ({ image = "" }) => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
   return (
-    <Stack width={200} spacing={2}>
+    <Stack width="100%" spacing={2} alignContent="center">
       {/* <Paper sx={{ width: "100%", overflow: "hidden" }}>
         <img src={image} alt="350cc" style={{ width: "100%" }} />
       </Paper> */}
@@ -22,7 +23,7 @@ const CardProduct = ({ image = "" }) => {
             <img src={require("../../src/image/bottle.png")} />
           </div>
           <div className={style.contentBx}>
-            <h2>PPS Bottle</h2>
+            <h2 style={{ fontFamily: "Josefin Sans" }}>PPS Bottle 600 cc</h2>
             {/* <div className={style.size}>
               <h3>Size :</h3>
               <span>7</span>
@@ -33,10 +34,24 @@ const CardProduct = ({ image = "" }) => {
             <div className={style.color}>
               <h3>Cover Color :</h3>
               <span></span>
-              <span></span>
-              <span></span>
+              {/* <span></span>
+              <span></span> */}
             </div>
-            <Stack alignItems="center" gap="10px">
+            <Box
+              style={{
+                backgroundColor: "#fff",
+                borderRadius: "20px",
+                padding: "3px",
+              }}
+              className={style.boxinfo}
+            >
+              <h3>คลิกเพื่อดูรายละเอียดเพิ่มเติม</h3>
+              ผลิตแบรนด์เพิ่มพูนทรัพย์
+              <br />
+              และ รับผลิตในแบรนด์ลูกค้า
+            </Box>
+
+            {/* <Stack alignItems="center" gap="10px">
               <a
                 href="#"
                 onMouseEnter={() => setHover1(true)}
@@ -51,7 +66,7 @@ const CardProduct = ({ image = "" }) => {
               >
                 {hover2 ? "300" : "wholesale(ขายส่ง)"}
               </a>
-            </Stack>
+            </Stack> */}
           </div>
         </div>
       </Box>

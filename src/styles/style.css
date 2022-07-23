@@ -1,11 +1,42 @@
-* {
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Rubik:wght@500&display=swap");
+html {
+  scroll-behavior: smooth;
+  color: #444;
+  font-family: "IBM Plex Sans Thai", sans-serif;
 }
+
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 100px;
+  width: auto;
   background-color: rgb(184, 215, 255);
 }
 
 .imgstyle {
   width: 100px;
+}
+
+.footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgb(158, 158, 242) 0%,
+    rgba(153, 189, 247, 1) 73%
+  );
+}
+
+@media screen and (max-width: 390px) {
+  /* phone */
+}
+@media screen and (max-width: 600px) {
+  /* tablet */
+}
+
+@media screen and (max-width: 768px) {
+  /* desktop */
 }

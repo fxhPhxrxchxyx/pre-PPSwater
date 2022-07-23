@@ -16,11 +16,16 @@ const Navbar = () => {
       sx={{
         boxShadow: "9px 9px 20px -4px rgba(0,0,0,0.57)",
         background:
-          "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(153, 189, 247, 1) 0%, rgba(142, 142, 236, 1) 73%)",
+          "linear-gradient(90deg, rgba(153, 189, 247, 1) 0%, rgba(142, 142, 236, 1) 73%)",
       }}
       display="flex"
       height="64px"
       justifyContent="center"
+      width="100%"
+      overflow="hidden"
+      position="fixed"
+      top="0"
+      zIndex="100"
     >
       <Box
         display="flex"
@@ -30,14 +35,29 @@ const Navbar = () => {
         padding="0 10px"
         maxWidth="1248px"
         width="100%"
+        // overflow="hidden"
+        position="fixed"
+        top="0"
+        zIndex="100"
       >
         <img src={Logo} alt="logo" width="60px" height="55px" />
 
         <Box display="flex" gap="20px">
-          <NavbarItem icon={faHouseChimney} name="Home"></NavbarItem>
-          <NavbarItem icon={faCircleInfo} name="About"></NavbarItem>
-          <NavbarItem icon={faCartShopping} name="Bucket"></NavbarItem>
-          <NavbarItem icon={faBottleWater} name="packge"></NavbarItem>
+          <NavbarItem
+            icon={faHouseChimney}
+            name="Home"
+            href="/home"
+          ></NavbarItem>
+          <NavbarItem
+            icon={faCircleInfo}
+            name="About"
+            href="/about"
+          ></NavbarItem>
+          <NavbarItem
+            icon={faBottleWater}
+            name="Packge"
+            href="/packge"
+          ></NavbarItem>
           {/* <i class="fa-solid fa-bottle-water"></i> */}
 
           {/* <Typography variant='body1'><FontAwesomeIcon icon={faHouseChimney}></FontAwesomeIcon> Home</Typography>
