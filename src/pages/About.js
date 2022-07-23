@@ -89,7 +89,7 @@ const About = () => {
                   width: "250px",
                   marginBottom: "30px",
                 }}
-              ></img>
+              />
               <Box display="flex" alignItems="center">
                 <Typography
                   variant="h6"

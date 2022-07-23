@@ -17,7 +17,9 @@ body {
 .imgstyle {
   width: 100px;
 }
-
+h2 {
+  color: black;
+}
 .footer {
   /* position: absolute; */
   bottom: 0;
