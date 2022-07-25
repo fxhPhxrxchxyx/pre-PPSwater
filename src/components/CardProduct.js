@@ -3,7 +3,7 @@ import { borderRadius } from "@mui/system";
 import React, { useState } from "react";
 import style from "../styles/ProductCard.module.css";
 
-const CardProduct = ({ image = "" }) => {
+const CardProduct = ({ detail }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -21,10 +21,10 @@ const CardProduct = ({ image = "" }) => {
       <Box className={style.container}>
         <div className={style.card}>
           <div className={style.imgBx}>
-            <img src={require("../../src/image/bottle.png")} />
+            <img src={detail.image} />
           </div>
           <div className={style.contentBx}>
-            <h2 style={{ fontFamily: "Josefin Sans" }}>PPS Bottle 600 cc</h2>
+            <h2 style={{ fontFamily: "Josefin Sans" }}>PPS {detail.title}</h2>
             {/* <div className={style.size}>
               <h3>Size :</h3>
               <span>7</span>
@@ -34,9 +34,10 @@ const CardProduct = ({ image = "" }) => {
             </div> */}
             <div className={style.color}>
               <h3>Cover Color :</h3>
-              <span></span>
-              {/* <span></span>
-              <span></span> */}
+              {detail.colors.map((color) => (
+                <span style={{ backgroundColor: color }}></span>
+              ))}
+              {/* <span style={{ backgroundColor: detail.colors[0] }}></span> */}
             </div>
             <Box
               onClick={handleOpen}
