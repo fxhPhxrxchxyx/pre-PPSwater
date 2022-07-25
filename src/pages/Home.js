@@ -1,6 +1,10 @@
 import React from "react";
 import CardProduct from "../components/CardProduct";
-import image350cc from "../image/IMG_4214.JPG";
+import image350cc from "../image/350.png";
+import image600cc from "../image/600th.png";
+import image1500cc from "../image/1500.png";
+import imageggalonblue from "../image/galonblue.png";
+import imageggalonwhite from "../image/galonwhite.png";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { Container, Stack } from "@mui/material";
 import { Box } from "@mui/system";
@@ -9,13 +13,19 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-const imagelist = [
+const imagelist1 = [
   image350cc,
+  image600cc,
+  image1500cc,
+  imageggalonblue,
+  imageggalonwhite,
+];
+const imagelist2 = [
   image350cc,
-  image350cc,
-  image350cc,
-  image350cc,
-  image350cc,
+  image600cc,
+  image1500cc,
+  imageggalonblue,
+  imageggalonwhite,
 ];
 
 const Home = () => {
@@ -50,7 +60,7 @@ const Home = () => {
               </Box>
             }
           >
-            {imagelist.map((image) => (
+            {imagelist1.map((image) => (
               <CardProduct image={image} />
             ))}
           </Carousel>
@@ -81,7 +91,7 @@ const Home = () => {
               </Box>
             }
           >
-            {imagelist.map((image) => (
+            {imagelist2.map((image) => (
               <CardProduct image={image} />
             ))}
           </Carousel>

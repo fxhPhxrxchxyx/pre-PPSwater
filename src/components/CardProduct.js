@@ -1,11 +1,12 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Modal, Stack, Typography } from "@mui/material";
 import { borderRadius } from "@mui/system";
 import React, { useState } from "react";
 import style from "../styles/ProductCard.module.css";
 
 const CardProduct = ({ image = "" }) => {
-  const [hover1, setHover1] = useState(false);
-  const [hover2, setHover2] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Stack width="100%" spacing={2} alignContent="center">
       {/* <Paper sx={{ width: "100%", overflow: "hidden" }}>
@@ -38,6 +39,7 @@ const CardProduct = ({ image = "" }) => {
               <span></span> */}
             </div>
             <Box
+              onClick={handleOpen}
               style={{
                 backgroundColor: "#fff",
                 borderRadius: "20px",
@@ -50,7 +52,24 @@ const CardProduct = ({ image = "" }) => {
               <br />
               และ รับผลิตในแบรนด์ลูกค้า
             </Box>
-
+            {/* <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              {/* <Box sx={(borderRadius = "15px")}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  Text in a modal
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  Duis mollis, est non commodo luctus, nisi erat porttitor
+                  ligula.
+                </Typography>
+              </Box> 
+            </Modal> 
+            ต้องแก้ก่อนนนนนนนนน
+            */}
             {/* <Stack alignItems="center" gap="10px">
               <a
                 href="#"
