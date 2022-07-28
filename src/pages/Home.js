@@ -18,68 +18,54 @@ import {
 const imagelist1 = [
   {
     image: image220cc,
-    title: "cup 220 cc",
-    colors: ["#FFFFFF"],
+    title: "PPS cup 220 cc",
+    colors: ["#0090f1"],
     description:
       "น้ำถ้วยขนาดบรรจุ 220 cc แก้วผลิตจากพลาสติกPP 1ลังบรรจุ 48ถ้วย พร้อมหลอด รัปประกันไม่มีน้ำรั่วซึมในทุกกล่องมั่นใจในคุณภาพ รับผลิตในแบรนด์ลูกค้าตามแบบที่ลูกค้าต้องการ สามารถทำได้มากกว่า 1 สี",
+    desbeforeClick: "ผลิตแบรนด์เพิ่มพูนทรัพย์ และ รับผลิตในแบรนด์ลูกค้า",
   },
   {
     image: image350cc,
-    title: "bottle 350 cc",
-    colors: [
-      "#FFFFFF",
-      "#303030",
-      "#592f2a",
-      "#a8832c",
-      "#e5c736",
-      "#508efc",
-      "#3558cf",
-      "#6f4a9d",
-      "#e658aa",
-      "#bac94e",
-      "#6cb640",
-      "#c90521",
-      "#e37ae3",
-    ],
+    title: "PPS bottle 350 cc",
+    colors: ["#FFFFFF"],
     description:
       "บรรจุขวด PET ใสชนิดกลม เป็นทรงกระปุกลอน สวมสลากตราเพิ่มพูนทรัพย์ ขวดหนาใสแข็งแรงทนทานไม่เสียรูปทรงง่าย ขนาดบรรจุ 350 cc แพ็คละ 12 ขวด รับผลิตในแบรนด์ลูกค้าทั้งแบบสวมสลากและสกรีนบนขวด รูปแบบที่รับผลิต กระปุกลอนและกระปุกลายเพรช",
+    desbeforeClick: "ผลิตแบรนด์เพิ่มพูนทรัพย์ และ รับผลิตในแบรนด์ลูกค้า",
   },
   {
     image: image600cc,
-    title: "bottle 600 cc",
+    title: "PPS bottle 600 cc",
     colors: ["#FFFFFF"],
     description:
       "บรรจุขวด PET ใสชนิดกลม รูปแบบ กลมลอน สวมสลากตราเพิ่มพูนทรัพย์ ขวดหนาใสแข็งแรงทนทานไม่เสียรูปทรงง่าย ขนาดบรรจุ 600 cc แพ็คละ 12 ขวด รับผลิตในแบรนด์ลูกค้าทั้งแบบสวมสลากและสกรีนบนขวด รูปแบบที่รับผลิต กลมลอน กลมเรียบ กลมเกลียว",
+    desbeforeClick:
+      "ผลิตแบรนด์เพิ่มพูนทรัพย์ และ รับผลิตในแบรนด์ลูกค้า (มีขนาด500cc)",
   },
   {
     image: image1500cc,
-    title: "bottle 1500 cc",
+    title: "PPS bottle 1500 cc",
     colors: ["#FFFFFF"],
     description:
       "บรรจุขวด PETใส รูปแบบกลมเกลียว 1 แพ็คบรรจุ 6 ขวด สวมสลากตราเพิ่มพูนทรัพย์ ขวดหนาใสแข็งแรงทนทานไม่เสียรูปทรงง่าย ขนาดบรรจุ 1500 cc",
+    desbeforeClick: "ผลิตแบรนด์เพิ่มพูนทรัพย์",
   },
 
   {
     image: imageggalonblue,
-    title: "galon blue 18.9 L",
+    title: "PPS galon blue 18.9 L",
     colors: ["#0066df"],
     description:
       "น้ำ 18.9ลิตร แบรนด์เพิ่มพูนทรัพย์ บรรจุในถังใสสีฟ้าชนิดกลม Polycarbonates(PC) ตัวถังสามารคว่ำบนเครื่องทำน้ำร้อนและน้ำเย็นได้ แข็งแรงทนทานไม่ตกแตกหรือชำรุดได้ง่ายและไม่ยุบตัวง่ายเมื่อเจอความร้อนหรือแรงดัน น้ำทุกหยดใสสะอาดมีคุณภาพไม่เปลี่ยนแปลงตั้งแต่โรงงานผลิตจนถึงมือลูกค้า ฝาที่ปิดปากถังเป็นฝาชนิดดึงใช้ครั้งเดียว มั่นใจในคุณภาพมั่นใจในน้ำดื่มของเรา หมายเหตุลูกค้าต้องมัดจำถังละ 300บาทต่อใบ",
+    desbeforeClick: "ผลิตแบรนด์เพิ่มพูนทรัพย์",
   },
   {
     image: imageggalonwhite,
-    title: "galon white 20 L",
+    title: "PPS galon white 20 L",
     colors: ["#FFFFFF"],
     description:
       "น้ำ 20 ลิตรบรรจุในถังขาวขุ่นชนิดกลม Polyethylene (PE) แบรนด์เพิ่มพูนทรัพย์  แข็งแรงทนทาน เหมาะสำหรับการคว่ำบนเครื่องทำน้ำร้อนและน้ำเย็น ไม่ยุบตัวง่าย ปากภาชนะมีซิลเพื่อรักษาคุณภาพจนถึงมือลูกค้า หมายเหตุลูกค้าต้องมัดจำถังละ 100บาทต่อใบ ",
+    desbeforeClick: "ผลิตแบรนด์เพิ่มพูนทรัพย์",
   },
-];
-const imagelist2 = [
-  // image350cc,
-  // image600cc,
-  // image1500cc,
-  // imageggalonblue,
-  // imageggalonwhite,
 ];
 
 const Home = () => {
@@ -102,6 +88,7 @@ const Home = () => {
             show={3}
             slide={1}
             swiping={true}
+            transition={0.7}
             rightArrow={
               <Box
                 style={{
@@ -118,37 +105,7 @@ const Home = () => {
               <CardProduct detail={detail} />
             ))}
           </Carousel>
-          {/* <Carousel
-            leftArrow={
-              <Box
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  height: "100%",
-                }}
-              >
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </Box>
-            }
-            show={3}
-            slide={1}
-            swiping={true}
-            rightArrow={
-              <Box
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  height: "100%",
-                }}
-              >
-                <FontAwesomeIcon icon={faChevronRight} />
-              </Box>
-            }
-          >
-            {imagelist2.map((image) => (
-              <CardProduct image={image} />
-            ))}
-          </Carousel> */}
+
           <Box marginTop={4}>
             <img
               alt="map"
@@ -157,6 +114,7 @@ const Home = () => {
                 height: "auto",
                 borderRadius: "25px",
                 marginBottom: "20px",
+                pointerEvents: "none",
               }}
               src={require("../image/produce.jpg")}
             />

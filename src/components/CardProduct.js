@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Modal, Stack, Typography } from "@mui/material";
 import { borderRadius } from "@mui/system";
 import React, { useState } from "react";
 import style from "../styles/ProductCard.module.css";
@@ -24,18 +24,21 @@ const CardProduct = ({ detail }) => {
             <img src={detail.image} />
           </div>
           <div className={style.contentBx}>
-            <h2 style={{ fontFamily: "Josefin Sans" }}>PPS {detail.title}</h2>
-            {/* <div className={style.size}>
-              <h3>Size :</h3>
-              <span>7</span>
-              <span>8</span>
-              <span>9</span>
-              <span>10</span>
-            </div> */}
+            <h2 style={{ fontFamily: "Josefin Sans" }}>{detail.title}</h2>
             <div className={style.color}>
               <h3>Cover Color :</h3>
+            </div>
+
+            <div
+              className={style.color}
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                marginBottom: "20px",
+              }}
+            >
               {detail.colors.map((color) => (
-                <span style={{ backgroundColor: color }}></span>
+                <div style={{ backgroundColor: color }}></div>
               ))}
               {/* <span style={{ backgroundColor: detail.colors[0] }}></span> */}
             </div>
@@ -49,28 +52,63 @@ const CardProduct = ({ detail }) => {
               className={style.boxinfo}
             >
               <h3>คลิกเพื่อดูรายละเอียดเพิ่มเติม</h3>
-              ผลิตแบรนด์เพิ่มพูนทรัพย์
-              <br />
-              และ รับผลิตในแบรนด์ลูกค้า
+
+              {detail.desbeforeClick}
             </Box>
-            {/* <Modal
+
+            <Modal
               open={open}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
-              {/* <Box sx={(borderRadius = "15px")}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                  Text in a modal
+              <Box
+                sx={{
+                  backgroundColor: "#fff",
+                  borderRadius: "15px",
+                  padding: "20px",
+                  maxWidth: "800px",
+                }}
+              >
+                <Typography
+                  id="modal-modal-title"
+                  variant="h5"
+                  component="h2"
+                  textAlign="center"
+                  sx={{
+                    fontFamily: "IBM Plex Sans Thai",
+                  }}
+                >
+                  {detail.title}
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  Duis mollis, est non commodo luctus, nisi erat porttitor
-                  ligula.
-                </Typography>
-              </Box> 
-            </Modal> 
-            ต้องแก้ก่อนนนนนนนนน
-            */}
+                <Grid container spacing={2}>
+                  <Grid xs={6} md={6}>
+                    <img
+                      alt="pps"
+                      style={{
+                        width: "400px",
+                        height: "auto",
+                        pointerEvents: "none",
+                      }}
+                      src={detail.image}
+                    />
+                    <Typography
+                      id="modal-modal-description"
+                      sx={{ m: 4, fontFamily: "IBM Plex Sans Thai" }}
+                    >
+                      {detail.description}
+                    </Typography>
+                  </Grid>
+                  <Grid xs={6} md={6}></Grid>
+                </Grid>
+              </Box>
+            </Modal>
+
             {/* <Stack alignItems="center" gap="10px">
               <a
                 href="#"

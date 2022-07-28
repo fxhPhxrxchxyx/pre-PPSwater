@@ -3,12 +3,11 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { Card, CardMedia, Container, Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { Carousel } from "@trendyol-js/react-carousel";
 import React from "react";
 import Map from "../components/Map";
-import ppssalogan from "../image/ppssalogan.jpg";
 
 const About = () => {
   return (
@@ -20,6 +19,7 @@ const About = () => {
         maxWidth="1200px"
       >
         <Carousel
+          defaultWait={0}
           leftArrow={
             <Box
               style={{
@@ -33,6 +33,8 @@ const About = () => {
           }
           show={1}
           slide={1}
+          autoPlay={true}
+          delay={2000}
           swiping={true}
           rightArrow={
             <Box
@@ -43,18 +45,18 @@ const About = () => {
           }
         >
           <img
-            alt="map"
-            style={{ width: "1136px", height: "auto" }}
+            alt="pps"
+            style={{ width: "1136px", height: "auto", pointerEvents: "none" }}
             src={require("../image/ppssalogan.jpg")}
           />
           <img
-            alt="map"
-            style={{ width: "1136px", height: "auto" }}
+            alt="free"
+            style={{ width: "1136px", height: "auto", pointerEvents: "none" }}
             src={require("../image/freeservice.jpg")}
           />
           <img
-            alt="map"
-            style={{ width: "1136px", height: "auto" }}
+            alt="oem"
+            style={{ width: "1136px", height: "auto", pointerEvents: "none" }}
             src={require("../image/produce.jpg")}
           />
         </Carousel>
@@ -118,13 +120,18 @@ const About = () => {
       <Typography
         variant="h4"
         textAlign="center"
-        marginBottom="60px"
         fontFamily={800}
         style={{ fontFamily: "IBM Plex Sans Thai" }}
       >
         ประเภทน้ำดื่มของทางเพิ่มพูนทรัพย์
       </Typography>
-      {/* <Box>ขวดขนาดต่างๆ</Box> */}
+      <Box>
+        <img
+          alt="product"
+          style={{ width: "1136px", height: "auto", pointerEvents: "none" }}
+          src={require("../image/allproduct.png")}
+        />
+      </Box>
       <hr
         style={{
           color: "rgb(116, 114, 114)",
@@ -152,23 +159,25 @@ const About = () => {
         marginBottom="60px"
       >
         <img
-          alt="map"
+          alt="ro"
           src={require("../image/ro.jpg")}
           style={{
             borderRadius: "50%",
             width: "150px",
             height: "150px",
             height: "auto",
+            pointerEvents: "none",
           }}
         />
         <img
-          alt="map"
+          alt="uv"
           src={require("../image/uv.jpg")}
           style={{
             borderRadius: "50%",
             width: "150px",
             height: "150px",
             height: "auto",
+            pointerEvents: "none",
           }}
         />
       </Stack>
@@ -208,6 +217,7 @@ const About = () => {
             borderRadius: "15px",
             width: "auto",
             height: "350px",
+            pointerEvents: "none",
           }}
         />
         <Stack maxWidth="400px">
@@ -245,7 +255,7 @@ const About = () => {
       <Container>
         <Box display="flex" gap={4} margin={8} justifyContent="center">
           <img
-            alt="map"
+            alt="product"
             src={require("../image/mappps.jpg")}
             style={{
               borderRadius: "15px",
