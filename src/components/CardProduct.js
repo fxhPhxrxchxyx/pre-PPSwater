@@ -81,7 +81,7 @@ function ChildModal({ detail }) {
           <img
             alt="mockup"
             style={{
-              width: "300px",
+              width: "320px",
               height: "auto",
               borderRadius: "25px",
               marginBottom: "20px",
