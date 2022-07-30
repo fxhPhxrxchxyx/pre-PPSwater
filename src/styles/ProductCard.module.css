@@ -55,7 +55,7 @@
 }
 
 .container .card:hover .imgBx {
-  top: 0%;
+  top: -12%;
   transform: translateY(0%);
 }
 
@@ -79,7 +79,7 @@
 }
 
 .container .card:hover .contentBx {
-  height: 265px;
+  height: 263px;
 }
 
 .container .card .contentBx h2 {
@@ -134,9 +134,18 @@
 }
 
 .container .card .contentBx .color div:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
-
+.color div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.color div:hover {
+  transform: scale(1.2);
+}
 .container .card .contentBx a {
   display: inline-block;
   padding: 15px 20px;

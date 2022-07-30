@@ -1,8 +1,96 @@
-import { Box, Button, Grid, Modal, Stack, Typography } from "@mui/material";
-import { borderRadius } from "@mui/system";
-import React, { useState } from "react";
+import { Box, Button, Modal, Stack, Typography } from "@mui/material";
+import React from "react";
 import style from "../styles/ProductCard.module.css";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+function ChildModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <React.Fragment>
+      <Box display="flex" gap={2} justifyContent="center" cursor="pointer">
+        <Button
+          onClick={handleOpen}
+          variant="contained"
+          sx={{
+            borderRadius: "10px",
+            backgroundColor: "#dce9fe",
+            color: "#444",
+          }}
+        >
+          สวมสลาก
+        </Button>
+        <Button
+          onClick={handleOpen}
+          variant="contained"
+          sx={{
+            borderRadius: "10px",
+            backgroundColor: "#dce9fe",
+            color: "#444",
+          }}
+        >
+          สกรีน
+        </Button>
+      </Box>
+
+      <Modal
+        hideBackdrop
+        open={open}
+        onClose={handleClose}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          sx={{
+            backgroundColor: "#fff",
+            borderRadius: "15px",
+            padding: "20px",
+            maxWidth: "800px",
+          }}
+        >
+          <FontAwesomeIcon
+            icon={faXmark}
+            onClick={handleClose}
+            cursor="pointer"
+          />
+          <Typography
+            id="modal-modal-title"
+            variant="h5"
+            component="h2"
+            textAlign="center"
+            marginBottom="20px"
+            sx={{
+              fontFamily: "IBM Plex Sans Thai",
+            }}
+          >
+            ตัวอย่าง mock up
+          </Typography>
+          <img
+            alt="map"
+            style={{
+              width: "600px",
+              height: "auto",
+              borderRadius: "25px",
+              marginBottom: "20px",
+              pointerEvents: "none",
+            }}
+            // src={}
+          />
+        </Box>
+      </Modal>
+    </React.Fragment>
+  );
+}
 const CardProduct = ({ detail }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,7 +122,8 @@ const CardProduct = ({ detail }) => {
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                marginBottom: "20px",
+                marginBottom: "15px",
+                gap: "4px",
               }}
             >
               {detail.colors.map((color) => (
@@ -69,43 +158,122 @@ const CardProduct = ({ detail }) => {
             >
               <Box
                 sx={{
-                  backgroundColor: "#fff",
+                  backgroundColor: "#f7fafd",
                   borderRadius: "15px",
                   padding: "20px",
                   maxWidth: "800px",
                 }}
               >
+                <FontAwesomeIcon
+                  icon={faXmark}
+                  onClick={handleClose}
+                  cursor="pointer"
+                />
                 <Typography
                   id="modal-modal-title"
                   variant="h5"
                   component="h2"
                   textAlign="center"
+                  marginBottom="20px"
                   sx={{
                     fontFamily: "IBM Plex Sans Thai",
                   }}
                 >
                   {detail.title}
                 </Typography>
-                <Grid container spacing={2}>
-                  <Grid xs={6} md={6}>
-                    <img
-                      alt="pps"
-                      style={{
-                        width: "400px",
-                        height: "auto",
-                        pointerEvents: "none",
-                      }}
-                      src={detail.image}
-                    />
+                <Stack direction="row" spacing={2}>
+                  <img
+                    alt="pps"
+                    style={{
+                      width: "400px",
+                      height: "auto",
+                      pointerEvents: "none",
+                    }}
+                    src={detail.image}
+                  />
+                  <Stack>
                     <Typography
-                      id="modal-modal-description"
-                      sx={{ m: 4, fontFamily: "IBM Plex Sans Thai" }}
+                      textAlign="center"
+                      variant="h6"
+                      sx={{
+                        fontFamily: "IBM Plex Sans Thai",
+                        maxHeight: "150px",
+                        alignItems: "center",
+                      }}
                     >
                       {detail.description}
                     </Typography>
-                  </Grid>
-                  <Grid xs={6} md={6}></Grid>
-                </Grid>
+
+                    <Stack justifyContent="space-between">
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          m: 4,
+                          fontFamily: "IBM Plex Sans Thai",
+                          fontWeight: "bold",
+                        }}
+                        textAlign="center"
+                      >
+                        {detail.capcolor}
+                      </Typography>
+                      <Box margin={2}>
+                        <div
+                          className={style.color}
+                          style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            marginBottom: "20px",
+                            gap: "4px",
+                          }}
+                        >
+                          {detail.colors.map((color) => (
+                            <div style={{ backgroundColor: color }}></div>
+                          ))}
+                        </div>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontFamily: "IBM Plex Sans Thai",
+                            fontWeight: "bold",
+                          }}
+                          textAlign="center"
+                        >
+                          ตัวอย่างmock upขวด
+                        </Typography>
+                        <ChildModal />
+                      </Box>
+
+                      {/* <Box
+                        display="flex"
+                        gap={2}
+                        justifyContent="center"
+                        cursor="pointer"
+                      >
+                        <Button
+                          variant="contained"
+                          sx={{
+                            borderRadius: "10px",
+                            backgroundColor: "#dce9fe",
+                            color: "#444",
+                          }}
+                          onClick={<ChildModal />}
+                        >
+                          สวมสลาก
+                        </Button>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            borderRadius: "10px",
+                            backgroundColor: "#dce9fe",
+                            color: "#444",
+                          }}
+                        >
+                          สกรีน
+                        </Button>
+                      </Box> */}
+                    </Stack>
+                  </Stack>
+                </Stack>
               </Box>
             </Modal>
 

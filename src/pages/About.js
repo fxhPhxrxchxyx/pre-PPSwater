@@ -33,7 +33,6 @@ const About = () => {
           }
           show={1}
           slide={1}
-          autoPlay={true}
           delay={2000}
           swiping={true}
           rightArrow={

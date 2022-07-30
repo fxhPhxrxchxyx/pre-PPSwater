@@ -12,6 +12,7 @@ body {
   margin-top: 100px;
   width: auto;
   background-color: rgb(184, 215, 255);
+  overflow-x: hidden;
 }
 
 .imgstyle {
