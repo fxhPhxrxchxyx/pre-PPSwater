@@ -1,50 +1,52 @@
 import { Box, Button, Modal, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { Fragment } from "react";
 import style from "../styles/ProductCard.module.css";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function ChildModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+function ChildModal({ detail }) {
+  const [open, setOpen] = React.useState(null);
 
+  const handleClose = () => {
+    setOpen(null);
+  };
+  console.log(open, detail.label);
   return (
     <React.Fragment>
       <Box display="flex" gap={2} justifyContent="center" cursor="pointer">
-        <Button
-          onClick={handleOpen}
-          variant="contained"
-          sx={{
-            borderRadius: "10px",
-            backgroundColor: "#dce9fe",
-            color: "#444",
-            "&:hover": { backgroundColor: "#b6dcff" },
-          }}
-        >
-          สวมสลาก
-        </Button>
-        <Button
-          onClick={handleOpen}
-          variant="contained"
-          sx={{
-            borderRadius: "10px",
-            backgroundColor: "#dce9fe",
-            color: "#444",
-            "&:hover": { backgroundColor: "#b6dcff" },
-          }}
-        >
-          สกรีน
-        </Button>
+        {detail.label && (
+          <Button
+            onClick={() => setOpen(detail.label)}
+            variant="contained"
+            sx={{
+              borderRadius: "10px",
+              backgroundColor: "#dce9fe",
+              color: "#444",
+              "&:hover": { backgroundColor: "#b6dcff" },
+            }}
+          >
+            สวมสลาก
+          </Button>
+        )}
+        {detail.screen && (
+          <Button
+            onClick={() => setOpen(detail.screen)}
+            variant="contained"
+            sx={{
+              borderRadius: "10px",
+              backgroundColor: "#dce9fe",
+              color: "#444",
+              "&:hover": { backgroundColor: "#b6dcff" },
+            }}
+          >
+            สกรีน
+          </Button>
+        )}
       </Box>
 
       <Modal
         hideBackdrop
-        open={open}
+        open={open != null}
         onClose={handleClose}
         sx={{
           display: "flex",
@@ -70,7 +72,6 @@ function ChildModal() {
             variant="h5"
             component="h2"
             textAlign="center"
-            marginBottom="20px"
             sx={{
               fontFamily: "IBM Plex Sans Thai",
             }}
@@ -80,20 +81,20 @@ function ChildModal() {
           <img
             alt="mockup"
             style={{
-              width: "600px",
+              width: "300px",
               height: "auto",
               borderRadius: "25px",
               marginBottom: "20px",
               pointerEvents: "none",
             }}
-            // src={}
+            src={open}
           />
         </Box>
       </Modal>
     </React.Fragment>
   );
 }
-const CardProduct = ({ detail }) => {
+const CardProduct = ({ detail, showMockup }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -199,8 +200,9 @@ const CardProduct = ({ detail }) => {
                       variant="h6"
                       sx={{
                         fontFamily: "IBM Plex Sans Thai",
-                        maxHeight: "150px",
+                        maxHeight: "250px",
                         alignItems: "center",
+                        marginBottom: "40px",
                       }}
                     >
                       {detail.description}
@@ -210,7 +212,6 @@ const CardProduct = ({ detail }) => {
                       <Typography
                         variant="h5"
                         sx={{
-                          m: 4,
                           fontFamily: "IBM Plex Sans Thai",
                           fontWeight: "bold",
                         }}
@@ -218,12 +219,14 @@ const CardProduct = ({ detail }) => {
                       >
                         {detail.capcolor}
                       </Typography>
-                      <Box margin={2}>
+                      <Box>
                         <div
                           className={style.color}
                           style={{
                             display: "flex",
+                            justifyContent: "center",
                             flexWrap: "wrap",
+                            marginTop: "10px",
                             marginBottom: "20px",
                             gap: "4px",
                           }}
@@ -232,17 +235,22 @@ const CardProduct = ({ detail }) => {
                             <div style={{ backgroundColor: color }}></div>
                           ))}
                         </div>
-                        <Typography
-                          variant="h6"
-                          sx={{
-                            fontFamily: "IBM Plex Sans Thai",
-                            fontWeight: "bold",
-                          }}
-                          textAlign="center"
-                        >
-                          ตัวอย่างmock upขวด
-                        </Typography>
-                        <ChildModal />
+                        {showMockup && (
+                          <Fragment>
+                            <Typography
+                              variant="h6"
+                              sx={{
+                                fontFamily: "IBM Plex Sans Thai",
+                                fontWeight: "bold",
+                                marginBottom: "10px",
+                              }}
+                              textAlign="center"
+                            >
+                              ตัวอย่างmock upขวด
+                            </Typography>
+                            <ChildModal detail={detail} />
+                          </Fragment>
+                        )}
                       </Box>
 
                       {/* <Box

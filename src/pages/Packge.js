@@ -12,22 +12,21 @@ import image500เกลียว from "../image/500เกลียว.png";
 import image600cc from "../image/600ตรง.png";
 import image600lon from "../image/600.png";
 import image600เกลียว from "../image/600เกลียว.png";
-import white from "../image/white.png";
-import black from "../image/black.png";
-import brown from "../image/brown.png";
-import gold from "../image/gold.png";
-import yellow from "../image/yellow.png";
-import blue from "../image/blue.png";
-import darkblue from "../image/darkblue.png";
-import purple from "../image/purple.png";
-import green from "../image/green.png";
-import lightgreen from "../image/lightgreen.png";
-import orange from "../image/orange.png";
-import red from "../image/red.png";
-import pink from "../image/pink.png";
-import lightpink from "../image/lightpink.png";
+
+import lable350lon from "../image/350lonbg.png";
+import screen350lon from "../image/350lons.png";
+import s350hex from "../image/350hexs.png";
 import lable350 from "../image/350bg.png";
 import screen350 from "../image/350s.png";
+import s500 from "../image/500s.png";
+import l500lon from "../image/500lonbg.png";
+import s500เกลียว from "../image/500เกลียวs.png";
+import l500เกลียว from "../image/500เกลียวbg.png";
+import s600 from "../image/600s.png";
+import l600lon from "../image/600lonbg.png";
+import s600lon from "../image/600lonbg.png";
+import s600เกลียว from "../image/600เกลียวs.png";
+import l600เกลียว from "../image/600เกลียวbg.png";
 const list350 = [
   {
     image: image350cc,
@@ -52,8 +51,8 @@ const list350 = [
       "ขวด 350cc ทรงคลาสสิก รุ่นยอดนิยม รับผลิตแบบสวมสลาก พกพาสะดวกแข็งแรงทนทานจับถนัดมือ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
-    screen: screen350,
-    label: lable350,
+    screen: screen350lon,
+    label: lable350lon,
   },
   {
     image: image350hex,
@@ -78,6 +77,7 @@ const list350 = [
       "ขวด 350cc ทรงกระปุกเพชร รูปทรงใหม่ สวยงามสะดุดตาพกพาสะดวก รับผลิตแบบสกรีน ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: s350hex,
   },
   {
     image: image350model,
@@ -102,6 +102,8 @@ const list350 = [
       "ขวด 350cc ทรงกลมตรง รูปทรงทันสมัย จับถนัดมือ เหมาะกับการสกรีนที่ใช้พื้นที่กว้าง",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: screen350,
+    label: lable350,
   },
 ];
 
@@ -129,6 +131,7 @@ const list500 = [
       "ขวด 500cc ทรงกลมตรง รูปทรงทันสมัย จับถนัดมือ เหมาะกับการสกรีนที่ใช้พื้นที่กว้าง",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: s500,
   },
   {
     image: image500lon,
@@ -153,6 +156,7 @@ const list500 = [
       "ขวด 500cc ทรงคลาสสิก รุ่นยอดนิยม รับผลิตแบบสวมสลาก พกพาสะดวกแข็งแรงทนทานจับถนัดมือ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    label: l500lon,
   },
   {
     image: image500เกลียว,
@@ -177,6 +181,8 @@ const list500 = [
       "ขวด 500cc ทรงทันสมัย รับผลิตแบบสวมสลาก พกพาสะดวกแข็งแรงทนทานจับถนัดมือ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: s500เกลียว,
+    label: l500เกลียว,
   },
 ];
 
@@ -204,6 +210,7 @@ const list600 = [
       "ขวด 600cc ทรงกลมตรง รูปทรงทันสมัย จับถนัดมือ เหมาะกับการสกรีนที่ใช้พื้นที่กว้าง",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: s600,
   },
   {
     image: image600lon,
@@ -228,6 +235,8 @@ const list600 = [
       "ขวด 600cc ทรงคลาสสิก รุ่นยอดนิยม รับผลิตทั้งแบบสวมสลากและสกรีน พกพาสะดวกแข็งแรงทนทานจับถนัดมือ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    label: l600lon,
+    screen: s600lon,
   },
   {
     image: image600เกลียว,
@@ -252,6 +261,8 @@ const list600 = [
       "ขวด 600cc ทรงทันสมัย รับผลิตแบบสวมสลาก พกพาสะดวกแข็งแรงทนทานจับถนัดมือ",
     desbeforeClick: "รับผลิตในแบรนด์ลูกค้า",
     capcolor: "ฝาสีต่าง ๆ ที่เลือกได้ในแบรนด์ของคุณ",
+    screen: s600เกลียว,
+    label: l600เกลียว,
   },
 ];
 const Packge = () => {
@@ -292,7 +303,7 @@ const Packge = () => {
         </Typography>
         <Carousel show={3}>
           {list350.map((detail) => (
-            <CardProduct detail={detail} />
+            <CardProduct detail={detail} showMockup={true} />
           ))}
         </Carousel>
         <Typography
@@ -306,7 +317,7 @@ const Packge = () => {
         </Typography>
         <Carousel show={3}>
           {list500.map((detail) => (
-            <CardProduct detail={detail} />
+            <CardProduct detail={detail} showMockup={true} />
           ))}
         </Carousel>
         <Typography
@@ -320,7 +331,7 @@ const Packge = () => {
         </Typography>
         <Carousel show={3}>
           {list600.map((detail) => (
-            <CardProduct detail={detail} />
+            <CardProduct detail={detail} showMockup={true} />
           ))}
         </Carousel>
       </Stack>
