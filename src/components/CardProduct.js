@@ -23,6 +23,7 @@ function ChildModal() {
             borderRadius: "10px",
             backgroundColor: "#dce9fe",
             color: "#444",
+            "&:hover": { backgroundColor: "#b6dcff" },
           }}
         >
           สวมสลาก
@@ -34,6 +35,7 @@ function ChildModal() {
             borderRadius: "10px",
             backgroundColor: "#dce9fe",
             color: "#444",
+            "&:hover": { backgroundColor: "#b6dcff" },
           }}
         >
           สกรีน
