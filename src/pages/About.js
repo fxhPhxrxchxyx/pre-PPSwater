@@ -99,7 +99,7 @@ const About = () => {
                   ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์
                   <br />
                   Tel: 081-842-2554 , 081-985-3410 <br />
-                  Email: ppswater@yahoo.com
+                  Email: ppswater54@gmail.com
                 </Typography>
               </Box>
             </Stack>
@@ -128,7 +128,7 @@ const About = () => {
         <img
           alt="product"
           style={{ width: "1136px", height: "auto", pointerEvents: "none" }}
-          src={require("../image/allproduct.png")}
+          src={require("../image/allproduct.webp")}
         />
       </Box>
       <hr

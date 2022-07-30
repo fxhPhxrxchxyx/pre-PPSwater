@@ -25,7 +25,7 @@ const Footer = () => {
           marginBottom={2}
           style={{ fontFamily: "IBM Plex Sans Thai" }}
         >
-          Email: ppswater@yahoo.com
+          Email: ppswater54@gmail.com
         </Typography>
         <img
           src={require("../image/lineQr.jpg")}

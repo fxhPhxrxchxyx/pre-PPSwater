@@ -1,10 +1,10 @@
 import React from "react";
 import CardProduct from "../components/CardProduct";
-import image220cc from "../image/220.png";
-import image350cc from "../image/350.png";
-import image600cc from "../image/600th.png";
-import image1500cc from "../image/1500.png";
-import imageggalonblue from "../image/galonblue.png";
+import image220cc from "../image/220.webp";
+import image350cc from "../image/350.webp";
+import image600cc from "../image/600th.webp";
+import image1500cc from "../image/1500.webp";
+import imageggalonblue from "../image/galonblue.webp";
 import imageggalonwhite from "../image/galonwhite.png";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { Container, Stack } from "@mui/material";
@@ -148,8 +148,8 @@ const Home = () => {
                   พร้อมแจ้งรายละเอียดของลูกค้า
                   <br />• ชื่อผู้ติดต่อ เบอร์โทร Email <br />• ชื่อบริษัท
                   ที่อยู่ เลขประจำตัวผู้เสียภาษี ที่ใช้สำหรับเปิดบิล
-                  <br /> • ที่อยู่ในการจัดส่งผ่านทาง Email : ppswater@yahoo.com
-                  หรือ LINE Offical PPS Water
+                  <br /> • ที่อยู่ในการจัดส่งผ่านทาง Email :
+                  ppswater54@gmail.com หรือ LINE Offical PPS Water
                   <br />
                   (สามารถสอบถามข้อมูลเพิ่มเติมได้ที่ LINE Offical PPS Water และ
                   Tel: 081-842-2554, 081-985-3410)

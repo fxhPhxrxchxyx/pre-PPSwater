@@ -200,7 +200,7 @@ const CardProduct = ({ detail, showMockup }) => {
                       variant="h6"
                       sx={{
                         fontFamily: "IBM Plex Sans Thai",
-                        maxHeight: "250px",
+                        maxHeight: "280px",
                         alignItems: "center",
                         marginBottom: "40px",
                       }}

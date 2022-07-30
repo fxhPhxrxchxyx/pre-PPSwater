@@ -3,30 +3,30 @@ import React from "react";
 import { Carousel } from "@trendyol-js/react-carousel";
 
 import CardProduct from "../components/CardProduct";
-import image350cc from "../image/350lon.png";
-import image350hex from "../image/350hex.png";
-import image350model from "../image/350model.png";
-import image500cc from "../image/500.png";
-import image500lon from "../image/500m.png";
-import image500เกลียว from "../image/500เกลียว.png";
-import image600cc from "../image/600ตรง.png";
-import image600lon from "../image/600.png";
-import image600เกลียว from "../image/600เกลียว.png";
+import image350cc from "../image/350lon.webp";
+import image350hex from "../image/350hex.webp";
+import image350model from "../image/350model.webp";
+import image500cc from "../image/500.webp";
+import image500lon from "../image/500m.webp";
+import image500เกลียว from "../image/500เกลียว.webp";
+import image600cc from "../image/600ตรง.webp";
+import image600lon from "../image/600.webp";
+import image600เกลียว from "../image/600เกลียว.webp";
 
-import lable350lon from "../image/350lonbg.png";
-import screen350lon from "../image/350lons.png";
-import s350hex from "../image/350hexs.png";
-import lable350 from "../image/350bg.png";
-import screen350 from "../image/350s.png";
-import s500 from "../image/500s.png";
-import l500lon from "../image/500lonbg.png";
-import s500เกลียว from "../image/500เกลียวs.png";
-import l500เกลียว from "../image/500เกลียวbg.png";
-import s600 from "../image/600s.png";
-import l600lon from "../image/600lonbg.png";
-import s600lon from "../image/600lonbg.png";
-import s600เกลียว from "../image/600เกลียวs.png";
-import l600เกลียว from "../image/600เกลียวbg.png";
+import lable350lon from "../image/350lonbg.webp";
+import screen350lon from "../image/350lons.webp";
+import s350hex from "../image/350hexs.webp";
+import lable350 from "../image/350bg.webp";
+import screen350 from "../image/350s.webp";
+import s500 from "../image/500s.webp";
+import l500lon from "../image/500lonbg.webp";
+import s500เกลียว from "../image/500เกลียวs.webp";
+import l500เกลียว from "../image/500เกลียวbg.webp";
+import s600 from "../image/600s.webp";
+import l600lon from "../image/600lonbg.webp";
+import s600lon from "../image/600lons.webp";
+import s600เกลียว from "../image/600เกลียวs.webp";
+import l600เกลียว from "../image/600เกลียวbg.webp";
 const list350 = [
   {
     image: image350cc,
