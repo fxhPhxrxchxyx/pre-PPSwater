@@ -76,7 +76,7 @@ function ChildModal() {
             ตัวอย่าง mock up
           </Typography>
           <img
-            alt="map"
+            alt="mockup"
             style={{
               width: "600px",
               height: "auto",
