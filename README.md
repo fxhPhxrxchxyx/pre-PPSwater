@@ -1,2 +1,2 @@
 # web for PPS water
-### trial version *__(only destop view)__*
+### trial version *__(only desktop view)__*
